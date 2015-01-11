@@ -23,8 +23,20 @@ fs.readFile(input, 'utf-8', function (err, data) {
 		return item.dept;
 	});
 
+	var structuredResult = {
+		"departments": []
+	};
 
-	var formattedResult = JSON.stringify(result, null, 4);
+	for (var i = 0; i < Object.keys(result).length; i++) {
+		var key = Object.keys(result)[i];
+
+		structuredResult.departments.push({
+			"name": key,
+			"personel": result[key]
+		});
+	}
+
+	var formattedResult = JSON.stringify(structuredResult, null, 4);
 
 	fs.writeFile(output, formattedResult, function (err) {
 		if (err) {
