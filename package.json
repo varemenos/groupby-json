@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Adonis K. <aklp08@gmail.com> (http://adonisk.com/)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "~1.7.0"
+  }
 }
