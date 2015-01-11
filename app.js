@@ -19,7 +19,7 @@ fs.readFile(input, 'utf-8', function (err, data) {
 		throw new Error(err.message);
 	}
 
-	var result = _.indexBy(JSON.parse(data), function (item) {
+	var result = _.groupBy(JSON.parse(data), function (item) {
 		return item.dept;
 	});
 
