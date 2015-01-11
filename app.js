@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 _ = require('underscore');
 fs.require('fs');
 
